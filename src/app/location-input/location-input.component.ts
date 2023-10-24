@@ -31,6 +31,6 @@ export class LocationInputComponent {
     const radius= this.radius;
 
     //this.mapDisplayComponent.updateMap(latitude, longitude,radius);
-    this.mapDisplayComponent.initMap();
+    this.mapDisplayComponent.initMapwithParameter(latitude, longitude,radius);
   }
 }
