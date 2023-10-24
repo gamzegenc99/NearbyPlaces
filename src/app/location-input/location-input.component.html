@@ -1,15 +1,17 @@
 <div>
     <h2>Location Input</h2>
-    <form>
+    <form (ngSubmit)="searchLocations()"> <!--<form> etiketi ngSubmit etkinliği ile birleştirildi search düğmesi tıklandığında searchlocation() fonksiyonu inputlarabağlı  -->
       <label for="longitude">Longitude:</label>
-      <input type="text" id="longitude" name="longitude">
+      <input type="text" id="longitude" name="longitude" [(ngModel)]="longitude">
   
       <label for="latitude">Latitude:</label>
-      <input type="text" id="latitude" name="latitude">
+      <input type="text" id="latitude" name="latitude" [(ngModel)]="latitude">
   
       <label for="radius">Radius:</label>
-      <input type="text" id="radius" name="radius">
+      <input type="text" id="radius" name="radius" [(ngModel)]="radius">
   
-      <button>Search</button>
+      <button type="submit">Search</button>
+
+      <app-map-display></app-map-display>
     </form>
   </div>
